@@ -1,0 +1,17 @@
+name: Primer workflow
+
+on: push
+
+jobs:
+  hola_mundo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Mostrar mensaje
+        run: echo "Hola GH Actions"
+      - name: Bajar codigo
+        uses: actions/checkout@v4
+      - name: Instalar dependencias
+        run: pip install pytest
+      - name: Probar codigo
+        run: pytest test.py
