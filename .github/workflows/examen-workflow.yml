@@ -3,3 +3,16 @@ on:
   push:
     branches: 
       - nueva-caracteristica
+jobs:
+  ej1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Bajar Codigo
+        uses: actions/setup-python@v5
+      - name: Instalar test 
+        run: pip install pytest -y
+      - name: Ejecutar test
+        run: pytest test.py -y
+      - name: Pushear
+        uses: docker/build-push-action@v6
+    
