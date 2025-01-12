@@ -11,7 +11,7 @@ jobs:
       - name: Bajar codigo 
         uses: actions/checkout@v4
         
-      - name: Bajar Codigo
+      - name: Configurar python
         uses: actions/setup-python@v5
           
       - name: Instalar test 
