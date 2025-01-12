@@ -12,9 +12,9 @@ jobs:
       - name: Configurar python
         uses: actions/setup-python@v5
       - name: Instalar test 
-        run: pip install pytest -y
+        run: pip install pytest
       - name: Ejecutar test
-        run: pytest test.py -y
+        run: pytest test.py
       - name: Pushear
         uses: docker/build-push-action@v6
     
