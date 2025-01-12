@@ -7,8 +7,13 @@ jobs:
   ej1:
     runs-on: ubuntu-latest
     steps:
+
+      - name: Bajar codigo 
+        uses: actions/checkout@v4
+        
       - name: Bajar Codigo
         uses: actions/setup-python@v5
+          
       - name: Instalar test 
         run: pip install pytest -y
       - name: Ejecutar test
